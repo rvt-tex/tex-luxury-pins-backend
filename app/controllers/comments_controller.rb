@@ -4,4 +4,19 @@ class CommentsController < ApplicationController
         comments = Comment.all
         render json: comments, include: [:pins]
     end 
+
+    def create 
+        comment = Comment.new(comment_params)
+        if comment.save 
+            render json: CommentSerializer.new(comment)
+        else 
+            render json: {errors: comment.errors.full_messages}, status: :unprocessible_entity
+        end 
+    end 
+
+    private
+
+    def comment_params
+        params.require(:comment).permit(:content)
+    end 
 end
