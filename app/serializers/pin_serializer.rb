@@ -1,4 +1,5 @@
 class PinSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :username, :title, :description, :image_url, :brand_id, :brand, :comment
+  
 end
