@@ -14,10 +14,24 @@ class PinsController < ApplicationController
         end 
     end 
 
+    def destroy 
+        pin = Pin.find_by_id(params[:id])
+        if pin.destroy
+            pins = Pin.all 
+            render json: PinSerializer.new(pins)
+        else
+            render json: { message: "error"}  
+        end 
+    end 
+
     private
 
     def pin_params
-        params.require(:pin).permit(:username, :title, :description, :image_url, :brand_id)
+        params.require(:pin).permit(:username, :title, :description, :image_url, :brand_id, :comments)
     end 
+
+    def find_pin
+        @pin = Pin.find_by_id(params[:id])
+    end
 
 end

@@ -1,24 +1,36 @@
-# README
+TEX LUXURY PINS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A pin posting application that was design for car fanatics, who love speed, and luxury. This application was built using HTML, CSS, and JavaScript as the frontend and uses a Rails API on the backend.
 
-Things you may want to cover:
+Getting Started
+These instructions will get Tex Luxury Pins up and running on your computer without any issues. Your computer must have ruby on rails installed locally.
 
-* Ruby version
+Installing
+To run this app locally, fork and clone the frontend GitHub repo and the backend Github repo to your local machine.
+https://github.com/rvt-tex/tex-luxury-pins-backend
+https://github.com/rvt-tex/tex-luxury-pins-frontend
 
-* System dependencies
+Change directories into the backend local directory. Run bundle install to install dependencies, and rails db:migrate and rails db:seed to create and seed the database.
 
-* Configuration
+$cd tex-luxury-pins-backend
+$bundle install
+$rails db:migrate
+$rails db:seed
+Run $rails s to start a web server and access the app in a web browser.
 
-* Database creation
+$rails s
+Change directories into the frontend local directory. Use google chrome browser to visit index.html.
 
-* Database initialization
+$cd ..
+$cd tex-luxury-pins-frontend
+$open index.html
+Built With
+Rails
+SQLite3
+Contributing
 
-* How to run the test suite
+Bug reports and pull requests are welcome on GitHub at https://github.com/rvt-tex/tex-luxury-pins-frontend or at https://github.com/rvt-tex/tex-luxury-pins-backend . This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-* Services (job queues, cache servers, search engines, etc.)
+License
+This project is licensed under the MIT License - see the LICENSE.md file for details
 
-* Deployment instructions
-
-* ...
